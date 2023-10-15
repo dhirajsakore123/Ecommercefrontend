@@ -9,7 +9,7 @@ const GenericCompo = (props) => {
   const [data,setData]=useState('')
     useEffect(()=>{
      
-       axios.get(`http://localhost:4000/products/catogary/${props.catogary}`)
+       axios.get(`https://ecommersbackend-lqqo.onrender.com/products/catogary/${props.catogary}`)
        .then((res)=>setData(res.data))
        .catch((err)=>console.log(err))
     },[props.catogary])

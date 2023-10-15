@@ -6,7 +6,7 @@ import { Link} from 'react-router-dom'
 const AllCatogary = () => {
     const [data,setData]=useState('')
     useEffect(()=>{
-       axios.get(`http://localhost:4000/products/allproducts`)
+       axios.get(`https://ecommersbackend-lqqo.onrender.com/products/allproducts`)
        .then((res)=>setData(res.data))
        .catch((err)=>console.log(err))
     },[])

@@ -9,7 +9,7 @@ const SearchPage = () => {
   const [data,setData]=useState('')
   
     useEffect(()=>{
-       axios.get(`http://localhost:4000/products/search/${location}`)
+       axios.get(`https://ecommersbackend-lqqo.onrender.com/products/search/${location}`)
        .then((res)=>setData(res.data))
        .catch((err)=>console.log(err))
     },[location])

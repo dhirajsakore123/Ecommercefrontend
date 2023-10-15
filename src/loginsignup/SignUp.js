@@ -32,7 +32,7 @@ const SignUp = (props) => {
        setEmail('')
        setPassword('')
      
-       axios.post(`http://localhost:4000/products/register`,obj)
+       axios.post(`https://ecommersbackend-lqqo.onrender.com/products/register`,obj)
         .then(res=>toast(res.data.msg))
         .catch(err=>console.log(err))
       

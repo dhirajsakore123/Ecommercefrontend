@@ -64,7 +64,7 @@ let costprice = arr1.reduce((sum, item) => {
             userId:userId
            }
           
-            axios.post("http://localhost:4000/products/cart",obj2)
+            axios.post("https://ecommersbackend-lqqo.onrender.com/products/cart",obj2)
             .then((res)=>Setcart(res.data.user.cart))
             .catch((err)=>console.log(err))
           }
@@ -89,7 +89,7 @@ let costprice = arr1.reduce((sum, item) => {
             userId:userId 
            }
   
-          axios.post("http://localhost:4000/products/removecartitem",obj1)
+          axios.post("https://ecommersbackend-lqqo.onrender.com/products/removecartitem",obj1)
           .then((res)=>console.log(res.data))
           .catch((err)=>console.log(err))
         }
@@ -109,7 +109,7 @@ let costprice = arr1.reduce((sum, item) => {
             userId:userId 
            }
   
-          axios.post("http://localhost:4000/products/plusquantity",obj1)
+          axios.post("https://ecommersbackend-lqqo.onrender.com/products/plusquantity",obj1)
           .then((res)=>res.data)
           .catch((err)=>console.log(err))
         }
@@ -129,7 +129,7 @@ let costprice = arr1.reduce((sum, item) => {
             userId:userId 
            }
   
-          axios.post("http://localhost:4000/products/minusquantity",obj1)
+          axios.post("https://ecommersbackend-lqqo.onrender.com/products/minusquantity",obj1)
           .then((res)=>res.data)
           .catch((err)=>console.log(err))
         }

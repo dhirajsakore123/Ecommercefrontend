@@ -13,7 +13,7 @@ const DynamicCompo = () => {
     useEffect(()=>{
      
 
-       axios.get(`http://localhost:4000/products/Id/${params.Id}`)
+       axios.get(`https://ecommersbackend-lqqo.onrender.com/products/Id/${params.Id}`)
        .then((res)=>setData(res.data))
        .catch((err)=>console.log(err))
     },[params.Id])
@@ -28,7 +28,7 @@ const DynamicCompo = () => {
     const obj = JSON.parse(jsonString);
     const userId = obj._id;
     const productId=params.Id
-    axios.post("http://localhost:4000/products/addtocart",{
+    axios.post("https://ecommersbackend-lqqo.onrender.com/products/addtocart",{
     userId:userId,
     productId:productId
    })
