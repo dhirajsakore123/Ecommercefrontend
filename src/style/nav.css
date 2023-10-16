@@ -208,11 +208,23 @@ font-weight: 500;
 .middle-part{
 width: 100%;
 min-height: 100vh;
-background-color: rgb(244, 237, 237);
+background-color: #F5F5F5;
 position: relative;
 top:15vh;
 }
-
+.blue{
+    color:rgb(54, 171, 54);
+}
+.para
+{
+    display: flex;
+    column-gap: 2vw;
+    padding-left: 20px;
+}
+.tital{
+    color: #212020;
+    font-weight: bold;
+}
 
 .generic-Compo{
     padding-top: 40px;
@@ -286,10 +298,16 @@ padding-bottom: 10vh;
     font-weight: 480;
 }
 .dynamiccompo{
-    background-color: rgb(209, 236, 236);
+    background-color:  #F5F5F5;
     min-height: 100vh;
     width: 100%;
     display: flex;
+}
+.dynamic-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    row-gap: 2vh;
 }
 .dynamic1{
     padding-top: 30px;
@@ -300,12 +318,12 @@ padding-bottom: 10vh;
     align-items: center;
     row-gap: 8vh;
     background-color: rgb(255, 255, 255);
-    height: 100vh;
+  
 }
 .dynamic2{
     /* border: 2px solid black; */
     width:60vw;
-    background-color: rgb(255, 255, 255);
+    background-color: #F5F5F5;
    display: flex;
    flex-direction: column;
    row-gap: 2vh;
@@ -571,4 +589,30 @@ color: rgb(184, 184, 184);
    .search-inp{
     font-size: 0.7rem;
    }
+   
+   .dynamic-img{
+    height: auto;
+    width: 70%;
+}
+.dynamic1{
+    width: 100%;
+    padding-bottom: 5vh;
+}
+.dynamic2{
+    width: 100%;
+    justify-content: center;
+}
+.dynamiccompo{
+    flex-direction: column;
+    padding-bottom: 10vh;
+}
+.dynamic-rating{
+    width: 45px;
+}
+.price-sell{
+    font-size: 0.6rem;
+}
+.price-cost{
+    font-size: 0.6rem;
+}
 }

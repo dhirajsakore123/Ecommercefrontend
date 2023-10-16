@@ -174,8 +174,8 @@ let costprice = arr1.reduce((sum, item) => {
                       </div>
                     </div>
                     <div className="cart-iteminner1">
-                      <p className="name">{item.productId.name}...</p>
-                      <p>
+                      <p className="name">{item.productId.name.split(0,20)}...</p>
+                      <p className="price-small">
                         <span className="price-sell">₹{item.productId.sellingprice}</span>
                         <span className="price-cost">
                         ₹{item.productId.costprice}

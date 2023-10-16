@@ -10,7 +10,9 @@ const DynamicCompo = () => {
     const [data,setData]=useState('')
    const navigate=useNavigate()
     const params=useParams()
-
+    useEffect(()=>{
+      window.scrollTo(0,0)
+   },[])
     useEffect(()=>{
      
 
@@ -72,15 +74,15 @@ console.log(data)
                   <p><span className='price-sell'>{item.sellingprice}</span>     <span className='price-cost'>{item.costprice}</span>      <span className='price-discount'> {item.discount}Off</span></p>
                   <div className='dynamic-rating'>{item.rating}⭐</div>
                     <p className='dynamic-revive'>487 rating and 58 revivew</p>
-                    <div>
+                    <div className='dynamic-details'>
                     <p className='offers'>Available offers</p>
-                    <div><div className='dynamic-tag'></div><span>Bank Offer</span>10% off on ICICI Bank Credit Card,up to ₹1500,on order of ₹5,000 and above<span>T&C</span></div>
-                    <div><div className='dynamic-tag'></div><span>Bank Offer</span>10% off on Axis Bank and Citi Credit Card, up to ₹1500, on orders of ₹5,000 and above<span>T&C</span></div>
-                    <div><div className='dynamic-tag'></div><span>Bank Offer</span>5% off on Flipkart Axis Bank Credit Card, up to ₹625, on orders of ₹5,000 and above<span>T&C</span></div>
-                    <div><div className='dynamic-tag'></div><span>Bank Offer</span>10% off on ICICI Bank Credit Card EMI Txns, up to ₹1750, on orders of ₹5,000 and above<span>T&C</span></div>
-                    <p><span>Delivery</span>Delivery by Fri Oct 13 2023 | ₹40</p>
-                    <p><span>Warranty</span>No Warranty</p>
-                    <p><span>Description</span>{item.description}</p>
+                    <div><div className='dynamic-tag'></div><b>Bank Offer</b>10% off on ICICI Bank Credit Card,up to ₹1500,on order of ₹5,000 and above<b className='blue'>T&C</b></div>
+                    <div><div className='dynamic-tag'></div><b>Bank Offer</b>10% off on Axis Bank and Citi Credit Card, up to ₹1500, on orders of ₹5,000 and above<b className='blue'>T&C</b></div>
+                    <div><div className='dynamic-tag'></div><b>Bank Offer</b>5% off on Flipkart Axis Bank Credit Card, up to ₹625, on orders of ₹5,000 and above<b className='blue'>T&C</b></div>
+                    <div><div className='dynamic-tag'></div><b>Bank Offer</b>10% off on ICICI Bank Credit Card EMI Txns, up to ₹1750, on orders of ₹5,000 and above<b className='blue'>T&C</b></div>
+                    <p className='para'><span className='tital'>Delivery</span>Delivery by Fri Oct 13 2023 | ₹40</p>
+                    <p className='para'><span className='tital'>Warranty</span>No Warranty</p>
+                    <p className='para'><span className='tital'>Description</span>{item.description}</p>
                     </div>  
                 </div>
               

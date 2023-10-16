@@ -3,13 +3,13 @@
     padding: 0;
 }
 .container-login{
-    background:rgb(247, 170, 170);
+    background:#37475a;
     border-radius: 10px;
      width: 30vw;
     height: 70vh;
     border: 2px solid rgb(211, 208, 208);
     backdrop-filter:blur(0px);
-    color: #162938;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,9 +43,9 @@
 }
 .input-login{  
 border: 0px ;
-border-bottom: 2px solid  #162938;
+border-bottom: 2px solid white;
 height: 5vh;
-background-color:rgb(247, 170, 170);
+background-color:#37475a;
 font-size: 15px;
 }
 .input-login:focus{  
