@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+
 import { ToastContainer ,toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -36,7 +37,7 @@ const DynamicCompo = () => {
    .catch((err)=>console.log(err))
     navigate("/cart")
    }else{
-    toast("please Login")
+    toast("Please Login")
    }
     
    

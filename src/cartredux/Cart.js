@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "../style/cart.css";
 import Empty from "../logos/Empty.png";
 
-import HocCompo from "./HocCompo";
 import axios from "axios";
 
 const Cart = () => {
@@ -242,4 +241,4 @@ let costprice = arr1.reduce((sum, item) => {
   );
 };
 
-export default HocCompo(Cart);
+export default Cart;

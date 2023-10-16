@@ -13,6 +13,7 @@ const GenericCompo2 = () => {
     },[params.catogary2])
   return (
     <div className='mob'>
+    
     <div className='generic-Compo'>
       {
         data && data.map((item,index)=>{

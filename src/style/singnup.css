@@ -3,12 +3,12 @@
     padding: 0;
 }
 .container-login{
-    background:rgb(255, 255, 255);
+    background:rgb(247, 170, 170);
     border-radius: 10px;
      width: 30vw;
     height: 70vh;
     border: 2px solid rgb(211, 208, 208);
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(0px);
     color: #162938;
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@
 border: 0px ;
 border-bottom: 2px solid  #162938;
 height: 5vh;
-background-color:;
+background-color:rgb(247, 170, 170);
 font-size: 15px;
 }
 .input-login:focus{  
@@ -64,8 +64,15 @@ font-size: 15px;
 }
 @media only screen and (min-width:500px) and (max-width:1500px){
     .container-login{
-       width: 80vw;
+       width: 60vw;
        height: 60vh; 
+    }
+   
+}
+@media only screen and (min-width:280px) and (max-width:500px){
+    .container-login{
+       width: 90vw;
+       
     }
    
 }

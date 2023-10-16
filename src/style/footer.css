@@ -69,3 +69,12 @@
    .payments{
        height: 20px; 
    }
+
+   @media only screen and (min-width:280px) and (max-width:500px){
+    .footer1{
+        flex-wrap: wrap;
+    }
+   .footer2{
+    display: none;
+   }
+}

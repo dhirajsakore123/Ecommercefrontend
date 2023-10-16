@@ -14,7 +14,8 @@ const SearchPage = () => {
        .catch((err)=>console.log(err))
     },[location])
   return (
-  <div className='mob'>
+  <div className='mob4'>
+    <h1>{data.length} Results Related To Search</h1>
     <div className='generic-Compo'>
       {
         data && data.map((item,index)=>{

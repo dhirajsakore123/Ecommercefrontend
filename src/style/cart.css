@@ -156,3 +156,34 @@
     background-color: rgb(189, 193, 193);
 }
 
+@media only screen and (min-width:500px) and (max-width:1500px){
+    .cart-img {
+        height: 8vh;
+    }  
+    .name {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    .cart-iteminner {
+        column-gap: 2vw;
+        height: 20%;
+    }
+    .cart-iteminner1 {
+        row-gap: 1vh;
+    }
+}
+
+@media only screen and (min-width:280px) and (max-width:500px){
+    .item-cart{
+        flex-wrap: wrap;
+        padding-bottom: 40vh;
+    }
+    .item-cart1{
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    .cart-iteminner{
+        height: 70%;
+    }
+}
