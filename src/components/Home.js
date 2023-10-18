@@ -1,11 +1,13 @@
 
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-// import 'react-slideshow-image/dist/styles.css'
+
+
 
 import Slider from '../generic/Slider';
 import AllCatogary from './AllCatogary';
 import { useEffect } from 'react';
+
 
 const Home = () => {
  
@@ -20,6 +22,7 @@ const Home = () => {
       <Slider/>
       <ToastContainer/>
     <AllCatogary/>
+   
      </div>
    
   )

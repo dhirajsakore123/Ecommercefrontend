@@ -55,7 +55,7 @@
    row-gap: 5%;
     /* border: 2px solid rebeccapurple; */
     width: 400px;
-    height:400px;
+    height:60%;
     position: relative;
     top: 10px;
     border-radius: 5px;
@@ -154,6 +154,20 @@
     border: 0px;
     font-size: 1rem;
     background-color: rgb(189, 193, 193);
+}
+.payment-btn{
+    height: 5vh;
+   width: 13vw;
+}
+.placeorder-btn{
+    width: 50%;
+    height: 5vh;
+}
+.btns{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    border: 2px solid red;
 }
 
 @media only screen and (min-width:500px) and (max-width:1500px){

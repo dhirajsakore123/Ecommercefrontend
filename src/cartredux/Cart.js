@@ -3,6 +3,7 @@ import "../style/cart.css";
 import Empty from "../logos/Empty.png";
 
 import axios from "axios";
+import Payment from "./Payment";
 
 const Cart = () => {
   
@@ -135,7 +136,23 @@ let costprice = arr1.reduce((sum, item) => {
        
       }
   
-     
+     const handekPlaceOrder=()=>{
+      if(loggedIn){
+        const token=localStorage.getItem("token")
+        const token1=window.atob(token.split(".")[1])
+        const jsonString = `${token1}`;
+        const obj = JSON.parse(jsonString);
+        const userId = obj._id;
+
+        const obj1 ={
+          userId:userId 
+         }
+
+        axios.post("https://ecommersbackend-lqqo.onrender.com/products/placeorder",obj1)
+        .then((res)=>res.data)
+        .catch((err)=>console.log(err))
+      }
+     }
       
   
 
@@ -146,7 +163,7 @@ let costprice = arr1.reduce((sum, item) => {
 
   return (
     <div className="mob1">
-      {cart.length === 0 ? (
+      {!loggedIn || cart.length===0 ? (
         <div className="empty-cart">
           <h1>Your cart is currently Empty</h1>
           <img src={Empty} alt="not found" className="empty-img" />
@@ -231,12 +248,18 @@ let costprice = arr1.reduce((sum, item) => {
             </div>
             <hr />
             <div className="price-details green">
-              You will save {costprice - sellingprice} on this order
+            
             </div>
+            <div className="btns"> 
+              <Payment amount={sellingprice}/>
+            <button className="placeorder-btn" onClick={handekPlaceOrder}>Place Order</button>
+            </div>
+           
           </div>
+         
         </div>
       )}
-       
+     
     </div>
   );
 };

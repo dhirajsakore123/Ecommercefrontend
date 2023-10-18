@@ -78,13 +78,15 @@ const Navbar = () => {
         </div>
     </div> 
     <div onMouseEnter={()=>setMobile(true)}  onMouseLeave={()=>setMobile(false)}>
+
        <div><NavLink className='menu' to='/mobile' >Mobiles</NavLink></div>
+
        <div className={mobile?'min-menu':'min-menufalse'}>
-       <div ><Link className='sub-items' to='/generic2/iphone'>Iphone</Link></div>
-       <div><Link className='sub-items' to='/generic2/oneplus'>OnePlus</Link></div>
-       <div ><Link className='sub-items' to='/generic2/vivo'>Vivo</Link></div>
-          
-        </div>
+           <div ><Link className='sub-items' to='/generic2/iphone'>Iphone</Link></div>
+           <div><Link className='sub-items' to='/generic2/oneplus'>OnePlus</Link></div>
+           <div ><Link className='sub-items' to='/generic2/vivo'>Vivo</Link></div>  
+      </div>
+      
     </div>
     <div onMouseEnter={()=>setLaptop(true)} onMouseLeave={()=>setLaptop(false)}>
        <div><NavLink className='menu' to='/laptop' >Laptops</NavLink></div>
