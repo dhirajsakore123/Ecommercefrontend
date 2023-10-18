@@ -168,7 +168,7 @@ let costprice = arr1.reduce((sum, item) => {
 
   return (
     <div className="mob1">
-      {!loggedIn || cart.length===0 ? (
+      {!loggedIn ? (
         <div className="empty-cart">
           <h1>Your cart is currently Empty</h1>
           <img src={Empty} alt="not found" className="empty-img" />
