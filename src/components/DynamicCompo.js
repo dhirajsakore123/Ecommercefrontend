@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 import { ToastContainer ,toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const DynamicCompo = () => {
  
     const [data,setData]=useState('')
-   const navigate=useNavigate()
+  //  const navigate=useNavigate()
     const params=useParams()
     useEffect(()=>{
       window.scrollTo(0,0)
@@ -37,7 +37,7 @@ const DynamicCompo = () => {
    })
    .then((res)=>console.log(res.data))
    .catch((err)=>console.log(err))
-    navigate("/cart")
+    // navigate("/cart")
    }else{
     toast("Please Login")
    }
