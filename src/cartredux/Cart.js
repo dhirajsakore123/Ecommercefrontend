@@ -4,6 +4,8 @@ import Empty from "../logos/Empty.png";
 
 import axios from "axios";
 import Payment from "./Payment";
+import { ToastContainer ,toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Cart = () => {
   
@@ -138,6 +140,7 @@ let costprice = arr1.reduce((sum, item) => {
   
      const handekPlaceOrder=()=>{
       if(loggedIn){
+        toast("Order Placed sucessfully")
         const token=localStorage.getItem("token")
         const token1=window.atob(token.split(".")[1])
         const jsonString = `${token1}`;
@@ -259,7 +262,7 @@ let costprice = arr1.reduce((sum, item) => {
          
         </div>
       )}
-     
+     <ToastContainer/>
     </div>
   );
 };

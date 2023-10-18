@@ -20,7 +20,7 @@ const Payment = (props) => {
                 currency: 'INR',
                 name: 'IShop',
                 description: 'Payment for Purchase',
-                order_id: `${data.order_id}`,
+                order_id: data.order_id,
               
             };
            

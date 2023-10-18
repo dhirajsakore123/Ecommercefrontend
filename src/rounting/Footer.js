@@ -39,12 +39,12 @@ const Footer = () => {
 
       <div className='footer2'>
           <div className='box2'>
-            <p className='heading1'>Informetion</p>
+            <p className='heading1'>Catogary</p>
               <div className='list1'>
-                <p>About Us </p>
-                <p>Infomation </p>
-                <p>Privacy Policy </p>
-                <p>Terms & Conditions</p>
+              <p>Mobile</p>
+                <p>Laptop</p>
+                <p>Tablets</p>
+                <p>Accessories</p>
              </div>
           </div>
           <div className='box2'>

@@ -82,12 +82,12 @@
     background-color: #37475A;
     display: flex;
     flex-direction: column;
-     align-items: left;
+     align-items:center;
      row-gap: 2vh;
      padding-top: 10px;
      transition: 0.5s;
      padding-left: 5px;
-     width: 5vw;
+     /* width: 5vw; */
      cursor: pointer;
      text-decoration: none;
     
@@ -102,7 +102,7 @@
   
 }
 .sub-items:hover{
-    background-color: rgb(244, 237, 237)
+    background-color: rgba(243, 233, 233, 0.132)
 }
 .menu::after{
     position: absolute;
@@ -546,6 +546,15 @@ color: rgb(184, 184, 184);
     .login-btn{
         height: 60%;
     }
+.navbar{
+    height: 10vh;
+}
+.middle-part{
+    top: 10vh;
+}
+.home-footer{
+    top: 0px;
+}
 }
 
 
