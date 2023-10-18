@@ -3,10 +3,11 @@ import axios from 'axios'
 // import { useNavigate } from 'react-router-dom'
 import { ToastContainer ,toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 
 const SignUp = (props) => {
-
+const navigate=useNavigate()
 //   const navigate=useNavigate()
     const[name,setName]=useState('')
     const[lastname,setLastname]=useState('')
@@ -35,7 +36,7 @@ const SignUp = (props) => {
        axios.post(`https://ecommersbackend-lqqo.onrender.com/products/register`,obj)
         .then(res=>toast(res.data.msg))
         .catch(err=>console.log(err))
-      
+       navigate('/login')
       // localStorage.setItem('token',value && value.token)
       // console(value && value)
       // alert(value && value.msg)

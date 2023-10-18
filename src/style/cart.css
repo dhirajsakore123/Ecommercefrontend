@@ -178,7 +178,7 @@
     /* border: 2px solid red; */
 }
 
-@media only screen and (min-width:500px) and (max-width:1500px){
+@media only screen and (min-width:500px) and (max-width:1000px){
     .cart-img {
         height: auto;
         width: 60%;

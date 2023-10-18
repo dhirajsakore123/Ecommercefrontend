@@ -33,7 +33,7 @@ const Routing = () => {
             <Route path='/cart' element={<Cart/>}/>
             <Route path='/search' element={<SearchPage/>}/>
             <Route path='/signuplogin' element={<Signuologin/>}/>
-          
+             
             
         </Routes>
         </div>
