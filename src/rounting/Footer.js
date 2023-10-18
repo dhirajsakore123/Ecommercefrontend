@@ -4,6 +4,7 @@ import Card from '../logos/card.png'
 import MasterCard from '../logos/mastercard.png'
 import Paypal from '../logos/paypal.png'
 import Visa from '../logos/visa.png'
+import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <div className='footer'>
@@ -18,16 +19,7 @@ const Footer = () => {
          <p className='follow-us'>Follow Us</p>
           follow us on instagram,faceboock <br/>
           and other socal-media platforms
-          <div> <img
-                          src="https://img.icons8.com/?size=1x&id=118497&format=png"
-                          className="media"
-                          alt="not found"
-                        />
-                        <img
-                          src="https://img.icons8.com/?size=1x&id=13963&format=png"
-                          className="media"
-                          alt="not found"
-                        /></div>
+         
         </div>
         <div className='box'>
         <p className='follow-us'>Contact Us</p>
@@ -41,40 +33,37 @@ const Footer = () => {
           <div className='box2'>
             <p className='heading1'>Catogary</p>
               <div className='list1'>
-              <p>Mobile</p>
-                <p>Laptop</p>
-                <p>Tablets</p>
-                <p>Accessories</p>
+              <p><Link to='/mobile'>Mobile</Link></p> 
+              <p> <Link to='/laptop'>Laptop</Link></p> 
+              <p> <Link to='/tablet'>Tablets</Link></p> 
+              <p> <Link  to='/assessories'>Accessories</Link></p> 
              </div>
           </div>
           <div className='box2'>
-            <p className='heading1'>Sercice</p>
+            <p className='heading1'>Brands</p>
               <div className='list1'>
-                <p>About Us </p>
-                <p>Infomation </p>
-                <p>Privacy Policy </p>
-                <p>Terms & Conditions</p>
+              <p><Link to='/generic2/iphone'>Apple</Link></p> 
+              <p> <Link to='/generic2/oneplus'>OnePlus</Link></p> 
+              <p> <Link  to='/generic2/vivo'>Vivo</Link></p> 
              </div>
           </div>
           <div className='box2'>
             <p className='heading1'>Extras</p>
               <div className='list1'>
-                <p>About Us </p>
-                <p>Infomation </p>
-                <p>Privacy Policy </p>
-                <p>Terms & Conditions</p>
+              <p><Link to='/generic2/iphone'>Apple</Link></p> 
+              <p> <Link to='/generic2/oneplus'>OnePlus</Link></p> 
+              <p> <Link  to='/generic2/vivo'>Vivo</Link></p> 
              </div>
           </div>
           <div className='box2'>
             <p className='heading1'>My Account</p>
               <div className='list1'>
-                <p>About Us </p>
-                <p>Infomation </p>
-                <p>Privacy Policy </p>
-                <p>Terms & Conditions</p>
+              <p><Link to='/aboutus'>About Us</Link></p> 
+              <p> <Link to='/information'>Infomation</Link></p> 
+              <p> <Link  to='/policy'>Privacy Policy</Link></p> 
              </div>
           </div>
-          <div className='box2'>
+          {/* <div className='box2'>
             <p className='heading1'>UseFul Links</p>
               <div className='list1'>
                 <p>About Us </p>
@@ -91,7 +80,7 @@ const Footer = () => {
                 <p>Privacy Policy </p>
                 <p>Terms & Conditions</p>
              </div>
-          </div>
+          </div> */}
       </div>
       <div className='footer3'>
          <img src={Card} alt='not found' className='payments'/>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 const Generic1 = (props) => {
   const [data,setData]=useState('')
     useEffect(()=>{
+      window.scrollTo(0,0)
        axios.get(`https://ecommersbackend-lqqo.onrender.com/products/catogary/${props.catogary}`)
        .then((res)=>setData(res.data))
        .catch((err)=>console.log(err))

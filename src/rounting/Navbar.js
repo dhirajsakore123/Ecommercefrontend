@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import profile from '../logos/profilewhite.png'
 import axios from 'axios';
-import Menu from '../cartredux/Menu';
+import hamburger from '../logos/hamburger.png'
 
 const Navbar = () => {
    const navigate=useNavigate()
@@ -41,7 +41,7 @@ const Navbar = () => {
        .then((res)=>Setcart(res.data.user.cart))
        .catch((err)=>console.log(err))
      }
-   })
+   },[cart,loggin])
   return (
     <div className='navbar'>
 
@@ -72,7 +72,7 @@ const Navbar = () => {
       <div className={change?"menu-navshow":'menu-nav'}>
 
     <div>
-       <div><NavLink className='menu' to='/' >Homes</NavLink></div>
+       <div><NavLink className='menu' to='/'  onClick={()=>setChange(!change)} >Homes</NavLink></div>
        <div className='min-menufalse'>
           
         </div>
@@ -82,37 +82,37 @@ const Navbar = () => {
        <div><NavLink className='menu' to='/mobile' >Mobiles</NavLink></div>
 
        <div className={mobile?'min-menu':'min-menufalse'}>
-           <div ><Link className='sub-items' to='/generic2/iphone'>Iphone</Link></div>
-           <div><Link className='sub-items' to='/generic2/oneplus'>OnePlus</Link></div>
-           <div ><Link className='sub-items' to='/generic2/vivo'>Vivo</Link></div>  
+           <div ><Link className='sub-items' to='/generic2/iphone' onClick={()=>setChange(!change)}>Iphone</Link></div>
+           <div><Link className='sub-items' to='/generic2/oneplus' onClick={()=>setChange(!change)}>OnePlus</Link></div>
+           <div ><Link className='sub-items' to='/generic2/vivo' onClick={()=>setChange(!change)}>Vivo</Link></div>  
       </div>
       
     </div>
     <div onMouseEnter={()=>setLaptop(true)} onMouseLeave={()=>setLaptop(false)}>
        <div><NavLink className='menu' to='/laptop' >Laptops</NavLink></div>
        <div className={laptop?'min-menu':'min-menufalse'}>
-       <div ><Link className='sub-items' to='/genericcompo2/mac'>MacBook</Link></div>
-       <div ><Link className='sub-items' to='/genericcompo2/hp'>HP</Link></div>
+       <div ><Link className='sub-items' to='/genericcompo2/mac' onClick={()=>setChange(!change)}>MacBook</Link></div>
+       <div ><Link className='sub-items' to='/genericcompo2/hp' onClick={()=>setChange(!change)}>HP</Link></div>
          
         </div>
     </div>
     <div onMouseEnter={()=>setTablet(true)} onMouseLeave={()=>setTablet(false)}>
        <div><NavLink className='menu' to='/tablet' >Tablets</NavLink></div>
        <div className={tablet?'min-menu':'min-menufalse'}>
-       <div ><Link className='sub-items' to='/genericcompo2/ipad'>IPad</Link></div>
-       <div ><Link className='sub-items' to='/genericcompo2/lenovo'>Lenovo</Link></div>
+       <div ><Link className='sub-items' to='/genericcompo2/ipad' onClick={()=>setChange(!change)}>IPad</Link></div>
+       <div ><Link className='sub-items' to='/genericcompo2/lenovo' onClick={()=>setChange(!change)}>Lenovo</Link></div>
         </div>
     </div>
     <div onMouseEnter={()=>setAccessories(true)} onMouseLeave={()=>setAccessories(false)}>
        <div><NavLink className='menu' to='/assessories' >Accessories</NavLink></div>
        <div className={accessories?'min-menu':'min-menufalse'}>
-       <div ><Link className='sub-items' to='/genericcompo2/wirlessbud'>Wirlessbud</Link></div>
-       <div><Link className='sub-items' to='/generic2/wirlessspeaker'>Speaker</Link></div>
+       <div ><Link className='sub-items' to='/genericcompo2/wirlessbud' onClick={()=>setChange(!change)}>Wirlessbud</Link></div>
+       <div><Link className='sub-items' to='/generic2/wirlessspeaker' onClick={()=>setChange(!change)}>Speaker</Link></div>
         </div>
     </div> 
     
       </div>
-      <div className='hamburger' onClick={()=>setChange(!change)}><Menu/></div>
+      <div className='hamburger' onClick={()=>setChange(!change)}><img src={hamburger} alt='not found' className='menu-hamburger'/></div>
     </div>
   )
 }

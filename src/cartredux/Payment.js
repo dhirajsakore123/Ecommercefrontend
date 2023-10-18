@@ -3,8 +3,6 @@ import axios from 'axios';
 
 const Payment = (props) => {
     const [data, setData] = useState('');
-    console.log(data)
-    console.log(data.order_id)
     const handlePayment = async () => {
         try {
             await axios.post('https://ecommersbackend-lqqo.onrender.com/products/createorder',{
@@ -44,7 +42,7 @@ const Payment = (props) => {
 
     return (
         <div>
-            <button className='payment-btn' onClick={handlePayment}>Make Payment</button>
+            <button className='payment-btn1' onClick={handlePayment}>Make Payment</button>
         </div>
     );
 };

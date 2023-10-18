@@ -56,21 +56,23 @@ let costprice = arr1.reduce((sum, item) => {
      
      
         useEffect(()=>{
-        if(loggedIn){
-          const token=localStorage.getItem("token")
-          const token1=window.atob(token.split(".")[1])
-          const jsonString = `${token1}`;
-          const obj = JSON.parse(jsonString);
-          const userId = obj._id;
-          const obj2={
-            userId:userId
-           }
-          
-            axios.post("https://ecommersbackend-lqqo.onrender.com/products/cart",obj2)
-            .then((res)=>Setcart(res.data.user.cart))
-            .catch((err)=>console.log(err))
-          }
-        })
+       if(loggedIn){
+        const token=localStorage.getItem("token")
+        const token1=window.atob(token.split(".")[1])
+        const jsonString = `${token1}`;
+        const obj = JSON.parse(jsonString);
+        const userId = obj._id;
+        const obj2={
+          userId:userId
+         }
+        
+          axios.post("https://ecommersbackend-lqqo.onrender.com/products/cart",obj2)
+          .then((res)=>Setcart(res.data.user.cart))
+          .catch((err)=>console.log(err))
+       }
+         
+        
+        },[cart,loggedIn])
 
        
          
@@ -166,13 +168,13 @@ let costprice = arr1.reduce((sum, item) => {
 
   return (
     <div className="mob1">
-      {!loggedIn  ? (
+      {!loggedIn || cart.length===0 ? (
         <div className="empty-cart">
           <h1>Your cart is currently Empty</h1>
           <img src={Empty} alt="not found" className="empty-img" />
         </div>
       ) : (
-        <div className="item-cart">
+        <div className="item-cart" >
           <div className="item-cart1">
          
             {cart &&
@@ -185,11 +187,11 @@ let costprice = arr1.reduce((sum, item) => {
                         className="cart-img"
                         alt="not found"
                       />
-                      <div className="plus-minus">
-                        <button className="plus"  onMouseOver={()=>setId(item.productId._id)}
+                      <div className="plus-minus" >
+                        <button className="plus" onTouchStart={()=>setId(item.productId._id)}  onMouseOver={()=>setId(item.productId._id)}
                         onClick={handelMinus}>-</button>{" "} 
                           <p>{item.quantity}</p>
-                        <button className="plus"  onMouseOver={()=>setId(item.productId._id)}
+                        <button className="plus" onTouchStart={()=>setId(item.productId._id)} onMouseOver={()=>setId(item.productId._id)}
                         onClick={handelPlus} >+</button>{" "}
                       </div>
                     </div>
@@ -208,6 +210,7 @@ let costprice = arr1.reduce((sum, item) => {
                       <p>Delivery By Delivery by Tue Oct 17 </p>
                       <button
                         className="btn-remove"
+                        onTouchStart={()=>setId(item.productId._id)}
                         onMouseOver={()=>setId(item.productId._id)}
                         onClick={handelRemove}
                       >
@@ -254,7 +257,7 @@ let costprice = arr1.reduce((sum, item) => {
             
             </div>
             <div className="btns"> 
-              <Payment amount={sellingprice}/>
+            <div className='payment-btn'><Payment amount={sellingprice}/></div>  
             <button className="placeorder-btn" onClick={handekPlaceOrder}>Place Order</button>
             </div>
            

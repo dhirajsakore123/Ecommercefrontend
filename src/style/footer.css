@@ -69,12 +69,18 @@
    .payments{
        height: 20px; 
    }
-
+   @media only screen and (min-width:500px) and (max-width:1000px){
+      .footer{
+        font-size: 0.8rem;
+      }
+   }
    @media only screen and (min-width:280px) and (max-width:500px){
+    .footer{
+        font-size: 0.8rem;
+    }
     .footer1{
         flex-wrap: wrap;
+        height: 65%;
     }
-   .footer2{
-    display: none;
-   }
+   
 }

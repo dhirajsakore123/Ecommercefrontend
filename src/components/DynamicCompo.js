@@ -49,7 +49,7 @@ const DynamicCompo = () => {
   
   }
 
-console.log(data)
+
   return (
     <div className='dynamiccompo'>
     {

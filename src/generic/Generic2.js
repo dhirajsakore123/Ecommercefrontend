@@ -6,7 +6,7 @@ const GenericCompo2 = () => {
     console.log(params);
   const [data,setData]=useState('')
     useEffect(()=>{
-    
+      window.scrollTo(0,0)
        axios.get(`https://ecommersbackend-lqqo.onrender.com/products/catogary2/${params.catogary2}`)
        .then((res)=>setData(res.data))
        .catch((err)=>console.log(err))

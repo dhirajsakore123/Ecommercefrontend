@@ -3,14 +3,14 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link} from 'react-router-dom'
 
-const AllCatogary = (props) => {
+const AllCatogary = () => {
     const [data,setData]=useState('')
     useEffect(()=>{
        axios.get(`https://ecommersbackend-lqqo.onrender.com/products/allproducts`)
        .then((res)=>setData(res.data))
        .catch((err)=>console.log(err))
     },[])
-     props.setData(data)
+   
   return (
     <div className='mob3'>
         <h1>All Catogary Products</h1>
