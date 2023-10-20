@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../style/cart.css";
-import Empty from "../logos/Empty.png";
+// import Empty from "../logos/Empty.png";
 
 import axios from "axios";
 import Payment from "./Payment";
@@ -170,8 +170,8 @@ let costprice = arr1.reduce((sum, item) => {
     <div className="mob1">
       {!loggedIn || cart.length===0 ? (
         <div className="empty-cart">
-          <h1>Your cart is currently Empty</h1>
-          <img src={Empty} alt="not found" className="empty-img" />
+          {/* <h1>Your cart is currently Empty</h1>
+          <img src={Empty} alt="not found" className="empty-img" /> */}
         </div>
       ) : (
         <div className="item-cart" >

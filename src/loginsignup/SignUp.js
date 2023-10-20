@@ -1,6 +1,6 @@
 import React, {  useState } from 'react'
 import axios from 'axios'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { ToastContainer ,toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = (props) => {
 // const navigate=useNavigate()
-//   const navigate=useNavigate()
+  const navigate=useNavigate()
     const[name,setName]=useState('')
     const[lastname,setLastname]=useState('')
     const[email,setEmail]=useState('')
@@ -34,7 +34,13 @@ const SignUp = (props) => {
        setPassword('')
      
        axios.post(`https://ecommersbackend-lqqo.onrender.com/products/register`,obj)
-        .then(res=>toast(res.data.msg))
+        .then(res=>{toast(res.data.msg)
+          if(res.data.token){
+            toast(res.data.msg)
+           localStorage.setItem('token',res.data.token)
+           localStorage.setItem('loggedIn',true)
+           navigate('/')}
+        })
         .catch(err=>console.log(err))
      
       // localStorage.setItem('token',value && value.token)
