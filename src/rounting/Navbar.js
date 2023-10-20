@@ -77,37 +77,37 @@ const Navbar = () => {
           
         </div>
     </div> 
-    <div onMouseEnter={()=>setMobile(true)}  onMouseLeave={()=>setMobile(false)}>
+    <div >
 
-       <div><NavLink className='menu' to='/mobile' >Mobiles</NavLink></div>
+       <div  className='flex'><NavLink className='menu' to='/mobile'  onClick={()=>setChange(!change)} >Mobiles</NavLink> <span className='menu-arrow'  onMouseEnter={()=>setMobile(true)}  onMouseLeave={()=>setMobile(false)}>˅</span></div>
 
-       <div className={mobile?'min-menu':'min-menufalse'}>
-           <div ><Link className='sub-items' to='/generic2/iphone' onClick={()=>setChange(!change)}>Iphone</Link></div>
+       <div className={mobile?'min-menu':'min-menufalse'}  onMouseEnter={()=>setMobile(true)}  onMouseLeave={()=>setMobile(false)} >
+           <div  ><Link className='sub-items' to='/generic2/iphone' onClick={()=>setChange(!change)} >Iphone</Link></div>
            <div><Link className='sub-items' to='/generic2/oneplus' onClick={()=>setChange(!change)}>OnePlus</Link></div>
            <div ><Link className='sub-items' to='/generic2/vivo' onClick={()=>setChange(!change)}>Vivo</Link></div>  
       </div>
       
     </div>
-    <div onMouseEnter={()=>setLaptop(true)} onMouseLeave={()=>setLaptop(false)}>
-       <div><NavLink className='menu' to='/laptop' >Laptops</NavLink></div>
-       <div className={laptop?'min-menu':'min-menufalse'}>
+    <div>
+       <div className='flex'><NavLink className='menu' to='/laptop'  onClick={()=>setChange(!change)} >Laptops</NavLink> <span  className='menu-arrow'  onMouseEnter={()=>setLaptop(true)} onMouseLeave={()=>setLaptop(false)}>˅</span></div>
+       <div className={laptop?'min-menu':'min-menufalse'}  onMouseEnter={()=>setLaptop(true)} onMouseLeave={()=>setLaptop(false)}>
        <div ><Link className='sub-items' to='/genericcompo2/mac' onClick={()=>setChange(!change)}>MacBook</Link></div>
-       <div ><Link className='sub-items' to='/genericcompo2/hp' onClick={()=>setChange(!change)}>HP</Link></div>
+       <div ><Link className='sub-items' to='/genericcompo2/hp'onClick={()=>setChange(!change)}>HP</Link></div>
          
         </div>
     </div>
-    <div onMouseEnter={()=>setTablet(true)} onMouseLeave={()=>setTablet(false)}>
-       <div><NavLink className='menu' to='/tablet' >Tablets</NavLink></div>
-       <div className={tablet?'min-menu':'min-menufalse'}>
-       <div ><Link className='sub-items' to='/genericcompo2/ipad' onClick={()=>setChange(!change)}>IPad</Link></div>
-       <div ><Link className='sub-items' to='/genericcompo2/lenovo' onClick={()=>setChange(!change)}>Lenovo</Link></div>
+    <div >
+       <div  className='flex'><NavLink className='menu' to='/tablet'  onClick={()=>setChange(!change)}>Tablets</NavLink> <span  className='menu-arrow' onClick={()=>setTablet(!tablet)} onMouseEnter={()=>setTablet(true)} onMouseLeave={()=>setTablet(false)}>˅</span></div>
+       <div className={tablet?'min-menu':'min-menufalse'} onMouseEnter={()=>setTablet(true)} onMouseLeave={()=>setTablet(false)}>
+       <div ><Link className='sub-items' to='/genericcompo2/ipad' onClick={()=>setChange(!change)} >IPad</Link></div>
+       <div ><Link className='sub-items' to='/genericcompo2/lenovo'onClick={()=>setChange(!change)}>Lenovo</Link></div>
         </div>
     </div>
-    <div onMouseEnter={()=>setAccessories(true)} onMouseLeave={()=>setAccessories(false)}>
-       <div><NavLink className='menu' to='/assessories' >Accessories</NavLink></div>
-       <div className={accessories?'min-menu':'min-menufalse'}>
+    <div>
+       <div  className='flex'><NavLink className='menu' to='/assessories'   onClick={()=>setChange(!change)}>Accessories</NavLink> <span  className='menu-arrow' onMouseEnter={()=>setAccessories(true)} onMouseLeave={()=>setAccessories(false)}>˅</span></div>
+       <div className={accessories?'min-menu':'min-menufalse'}  onMouseEnter={()=>setAccessories(true)} onMouseLeave={()=>setAccessories(false)}>
        <div ><Link className='sub-items' to='/genericcompo2/wirlessbud' onClick={()=>setChange(!change)}>Wirlessbud</Link></div>
-       <div><Link className='sub-items' to='/generic2/wirlessspeaker' onClick={()=>setChange(!change)}>Speaker</Link></div>
+       <div><Link className='sub-items' to='/generic2/wirlessspeaker'onClick={()=>setChange(!change)}>Speaker</Link></div>
         </div>
     </div> 
     

@@ -91,10 +91,11 @@
      /* width: 5vw; */
      cursor: pointer;
      text-decoration: none;
-    
+    transition: 1s;
 }
 .min-menufalse{
     display: none;
+   
 }
 .sub-items{
     text-decoration: none;
@@ -192,7 +193,7 @@ height: 90%;
 .cart-btn{
 width: 30%;
 height: 100%;
-background-image: url(../logos/image-removebg-preview\ \(2\).png);
+background-image: url(../logos/cart.png);
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
@@ -524,7 +525,40 @@ color: rgb(184, 184, 184);
     width: 25%;
     border: 2px solid black;
 }
+.menu-arrow{
+    display: flex;
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+    transform-origin: center;
+    transform: rotate(0deg);
+    /* border: 2px solid red; */
+     transition: 0.5s;
+    
+}
+/* .menu-arrow:hover{
 
+    transform: rotate(180deg);
+  /* -webkit-transform: rotate(-180deg) */
+/* } */ */
+.menu-arrow1{
+    display: flex;
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+    transform-origin: center;
+    transform: rotate(180deg);
+    /* border: 2px solid red; */
+     transition: 0.5s;
+}
+.flex{
+    display: flex;
+    /* column-gap: 1vw; */
+}
 /* ################################################### */
 .menu-hamburger{
   width: 50px;
@@ -562,9 +596,7 @@ color: rgb(184, 184, 184);
   transform-origin: right;
   transform:rotateZ(51deg);
 }
-.hamburger{
 
-}
 
 /* ################################################### */
 
@@ -603,6 +635,41 @@ color: rgb(184, 184, 184);
     width: 50%;
    max-height: 60%;
  }
+ .menu-nav{
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    row-gap: 5vh;
+    display: none;
+   
+   }
+   .menu-navshow{
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+   
+    row-gap: 5vh;
+    display: flex;
+    transition: 0.2s;
+    background-color: #37475A;
+   
+   }
+   .menu-arrow{
+    width: 50px;
+   }
+     .menu-hamburger{
+    display: flex;
+    position:fixed;
+  top:6vh;
+    left: 90vw;
+   
+    z-index: 10;
+   }
+   .hamburger{
+    width: 100%;
+    height: 8vw;
+    background-color: #37475A;
+   }
 
 }
 
