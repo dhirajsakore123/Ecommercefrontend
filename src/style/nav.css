@@ -538,11 +538,7 @@ color: rgb(184, 184, 184);
      transition: 0.5s;
     
 }
-/* .menu-arrow:hover{
 
-    transform: rotate(180deg);
-  /* -webkit-transform: rotate(-180deg) */
-/* } */ */
 .menu-arrow1{
     display: flex;
     width: 20px;
